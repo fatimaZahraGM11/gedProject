@@ -9,7 +9,7 @@
 <body>
     <div class="container my-5">
         <h2>list of Clients</h2>
-        <a class="btn btn-primary" href="/SAFAEPHP/create.php" role="button">New Client</a>
+        <a class="btn btn-primary" href="./create.php" role="button">New Client</a>
         <br>
         <table class="table">
             <thead>
@@ -25,9 +25,9 @@
             </thead>
             <tbody>
                 <?php
-               $servername ="localhost";
-               $username = "root";
-               $password = "";
+               $servername ="db";
+               $username = "myuser";
+               $password = "mypassword";
                $database = "gedproject";
                
                // Création de la connexion

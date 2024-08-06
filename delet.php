@@ -19,7 +19,7 @@ if (isset($_GET["id"]) ) {
         die("Connection failed: " . $connection->connect_error);
 }
 }
-header("location: /SAFAEPHP/index.php");
+header("location: ./index.php");
  exit;  
 
  

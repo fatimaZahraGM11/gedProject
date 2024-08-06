@@ -47,7 +47,7 @@ $address="";
 
  $successMessage= "Client added correctly";
 
- header("location: /SAFAEPHP/index.php");
+ header("location: ./index.php");
  exit;  
 
     } while(false);

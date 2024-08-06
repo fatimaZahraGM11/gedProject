@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' ) {
     // get method: show the data of the client
     
     if ( !isset($_GET["id"]) ) {
-        header("location: /SAFAEPHP/index.php");
+        header("location: ./index.php");
         exit;
     }
 
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' ) {
     $row=$result->fetch_assoc();
 
     if (!$row) {
-        header("location: /SAFAEPHP/index.php");
+        header("location: ./index.php");
         exit;
     }
     $name = $row["name"];
@@ -61,7 +61,7 @@ else {
            }
 
            $successMessage="Client updated correctly";
-           header("location: /SAFAEPHP/index.php");
+           header("location: ./index.php");
            exit;
     }while(true);
 }
@@ -90,33 +90,33 @@ else {
             ";
         }
         ?>
-        <form method="post"> 
+        <form method="post" action="./edit.php"> 
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="row nb-3">
                 <label class="col-sm-3 col-form-label">Name</label>
                 <div class="col-sm-6">
-                    <input type="text" class"form-control" name="name" value="<?php echo $name; ?>">
+                    <input type="text" class="form-control" name="name" value="<?php echo htmlspecialchars($address); ?>">
                 </div>
             </div>
 
             <div class="row nb-3">
                 <label class="col-sm-3 col-form-label">Email</label>
                 <div class="col-sm-6">
-                    <input type="text" class"form-control" name="email" value="<?php echo $email; ?>">
+                    <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
                 </div>
             </div>
 
             <div class="row nb-3">
                 <label class="col-sm-3 col-form-label">Phone</label>
                 <div class="col-sm-6">
-                    <input type="text" class"form-control" name="phone" value="<?php echo $phone; ?>">
+                    <input type="text" class="form-control" name="phone" value="<?php echo $phone; ?>">
                 </div>
             </div>
 
             <div class="row nb-3">
                 <label class="col-sm-3 col-form-label">Adress</label>
                 <div class="col-sm-6">
-                    <input type="text" class"form-control" name="adress" value="<?php echo $address; ?>">
+                    <input type="text" class="form-control" name="adress" value="<?php echo $address; ?>">
                 </div>
             </div>
 
@@ -140,7 +140,7 @@ else {
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="/myshop/index.php" role="button">cancel</a>
+                    <a class="btn btn-outline-primary" href="./index.php" role="button">cancel</a>
                 </div>  
             </div>
 
